@@ -34,7 +34,7 @@
 <body>
   <h1>Inscris-toi pour la bêta de HaycomChat !</h1>
   <form id="inscription-form">
-    <input type="email" id="email" placeholder="Ton adresse e-mail" required>
+    <input type="email" id="email" placeholder="conatct.haycom@gamil.com" required>
     <br>
     <button type="submit">Envoyer</button>
   </form>
@@ -48,7 +48,6 @@
       e.preventDefault();
       const email = document.getElementById('email').value;
 
-      // Simule un envoi ici (tu peux le remplacer par un appel à un service externe)
       if (email.includes('@')) {
         messageDiv.textContent = "Merci ! Tu seras prévenu dès que c'est prêt.";
         messageDiv.style.color = "#00b894";
