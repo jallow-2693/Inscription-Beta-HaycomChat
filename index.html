@@ -1,5 +1,77 @@
-<form action="https://formspree.io/f/xanoyrnn" method="POST">
-  <input type="email" name="email" placeholder="Ton adresse e-mail" required>
-  <br>
-  <button type="submit">Envoyer</button>
-</form>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription Bêta - HaycomChat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #111, #1e272e);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #222;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #00cec9;
+    }
+
+    input[type="email"] {
+      padding: 12px;
+      width: 100%;
+      margin: 15px 0;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 30px;
+      background-color: #00b894;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #019875;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Inscris-toi pour la bêta de HaycomChat !</h1>
+    <form action="https://formspree.io/f/xanoyrnn" method="POST">
+      <input type="email" name="email" placeholder="Ton adresse e-mail" required>
+      <br>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</body>
+    </html>
