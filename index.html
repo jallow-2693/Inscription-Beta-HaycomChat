@@ -33,14 +33,32 @@
 </head>
 <body>
   <h1>Inscris-toi pour la bêta de HaycomChat !</h1>
-  <form method="POST" action="send_email.php">
-    <input type="email" name="email" placeholder="Ton adresse e-mail" required>
+  <form id="inscription-form">
+    <input type="email" id="email" placeholder="Ton adresse e-mail" required>
     <br>
     <button type="submit">Envoyer</button>
   </form>
-  <div class="message">
-    <?php if (isset($_GET['success'])) echo "Merci ! Tu seras prévenu dès que c'est prêt."; ?>
-    <?php if (isset($_GET['error'])) echo "Erreur lors de l'envoi. Réessaie plus tard."; ?>
-  </div>
+  <div class="message" id="message"></div>
+
+  <script>
+    const form = document.getElementById('inscription-form');
+    const messageDiv = document.getElementById('message');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+
+      // Simule un envoi ici (tu peux le remplacer par un appel à un service externe)
+      if (email.includes('@')) {
+        messageDiv.textContent = "Merci ! Tu seras prévenu dès que c'est prêt.";
+        messageDiv.style.color = "#00b894";
+      } else {
+        messageDiv.textContent = "Erreur lors de l'envoi. Réessaie plus tard.";
+        messageDiv.style.color = "red";
+      }
+
+      form.reset();
+    });
+  </script>
 </body>
 </html>
